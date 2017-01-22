@@ -1,15 +1,8 @@
 base
-methods
-datasets
-utils
-grDevices
-graphics
-stats
 lattice
 ggplot2
 caret
 e1071
-parallel
 foreach
 iterators
 doParallel
@@ -18,6 +11,6 @@ klaR
 randomForest
 dplyr
 survival
-splines
 gbm
 plyr
+knitr

@@ -2,7 +2,11 @@
 title: " A model to predict the quality of weight lifting exercises"
 author: "aptyos"
 date: "21 janvier 2017"
-output: html_document
+output: 
+  html_document: 
+    fig_caption: yes
+    keep_md: yes
+    toc: yes
 ---
 
 #Synopsis
@@ -16,6 +20,7 @@ Here the data they collected is used to determine a (Machine Learning) model to 
 
 1. Loading required R packages.
 ```{r loadingLib, results='hide', message=FALSE, warning=FALSE}
+library(knitr)
 library(caret)
 library(e1071)
 library(parallel)

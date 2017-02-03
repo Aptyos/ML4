@@ -1,0 +1,37 @@
+---
+title: "Some Museums in Paris"
+author: "aptyos"
+date: "3 février 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###Paris (FRANCE)
+latitude=48.856614
+longitude=2.352222
+
+
+```{r, echo=FALSE}
+library(leaflet)
+parisLatLong <- data.frame(
+  lat = c(48.860611, 48.860642, 48.865475, 48.865895, 48.870678, 48.879631),
+  lng = c(2.337644, 2.352245, 2.296658,2.313805,2.350464,2.312489 ))
+
+c_museums <- c(
+  "<a href='http://www.louvre.fr/en'>Le Louvre</a>",                  # 48.860611   2.337644
+  "<a href='https://www.centrepompidou.fr/en'>Beaubourg</a>",         #(48.860642, 2.352245)
+  "<a href='http://palaisgalliera.paris.fr/'>Palais Galleria</a>",    #(48.865475, 2.296658)
+  "<a href='http://www.petitpalais.paris.fr/'>Le Petit Palais</a>",   # (48.865895, 2.313805)
+  "<a href='http://www.museeduchocolat.fr/'>Chocolate Museum</a>",     #(48.870678, 2.350464)
+  "<a href='http://www.cernuschi.paris.fr/'>Cernuschi Museum</a>"      #(48.879631, 2.312489)
+)
+
+parisLatLong %>%
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(popup = c_museums)
+```  
+

@@ -6,6 +6,8 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
+library(rmarkdown)
+library(knitr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
